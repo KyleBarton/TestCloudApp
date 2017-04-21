@@ -9,5 +9,11 @@ namespace HelloFriend
         {
             return Ok("Hello World!");
         }
+
+        [Route("hello/v2/{name}")]
+        public IHttpActionResult Get(string name)
+        {
+            return Ok($"Hello, {name}");
+        }
     }
 }
